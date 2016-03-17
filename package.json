@@ -1,0 +1,13 @@
+{
+  "name": "berichtsheft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Tobias Umbach <umbach@louis.info>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "node-sass-middleware": "^0.9.7"
+  }
+}

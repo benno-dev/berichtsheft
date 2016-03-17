@@ -1,0 +1,166 @@
+$color-gray: rgb(128, 128, 128);
+
+$font-size-small: 9pt;
+$font-size-normal: 11pt;
+$font-size-large: 16pt;
+
+@page {
+  size: A4;
+}
+
+@media print {
+  body {
+    width: auto !important;
+    margin: 1.25mm;
+
+    > h1 {
+      display: none !important;
+    }
+  }
+
+  .navigation {
+    display: none !important;
+  }
+}
+
+body {
+  font: $font-size-normal Helvetica;
+  color: $color-gray;
+  width: calc(240mm - 2.5mm);
+  height: calc(297mm - 2.5mm);
+}
+
+h1 {
+  margin: 1mm 0;
+  font-size: $font-size-large;
+}
+
+.nachweis {
+  border-collapse: collapse;
+
+  td {
+    border: 1px solid $color-gray;
+    padding: 0 4px;
+    margin: 0;
+  }
+
+  // Dimensions
+
+  .row-header td {
+    height: 2.8cm;
+    max-height: 2.8cm;
+  }
+
+  .row-activity td {
+    height: 10cm;
+    max-height: 10cm;
+  }
+
+  .row-topics-head td {
+    height: 1cm;
+    max-height: 1cm;
+  }
+
+  .row-topics td {
+    height: 6.85cm;
+    max-height: 6.85cm;
+  }
+
+  .row-signatures td {
+    height: 2.3cm;
+    max-height: 2.3cm;
+  }
+
+  .row-header  {
+    td {
+      position: relative;
+
+      span {
+        float: right;
+      }
+
+      >:nth-child(1), >:nth-child(2) {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+
+      >:nth-child(1) {
+        bottom: 15mm;
+      }
+
+      >:nth-child(2) {
+        bottom: 6mm;
+      }
+    }
+
+    .meta-dept, .meta-nr-and-date {
+      width: 5.25cm;
+    }
+
+    .headline {
+      width: 7.5cm;
+    }
+
+    .meta-dept, .headline {
+      text-align: center;
+
+      span {
+        float: none;
+      }
+    }
+
+    .meta-nr-and-date {
+      p {
+        left: 3mm;
+        right: 3mm;
+      }
+    }
+  }
+
+  .row-activity, .row-topics {
+    vertical-align: top;
+
+    h2, p {
+      font-size: $font-size-normal;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    p {
+      padding-left: 9mm;
+    }
+  }
+
+  .row-activity .week {
+    height: 2.95cm;
+    max-height: 2.95cm;
+  }
+
+  .row-topics .week {
+    height: 25%;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+  }
+
+  .row-topics-head {
+    font-size: $font-size-small;
+    text-align: center;
+  }
+
+  .row-signatures {
+    height: 67px;
+    vertical-align: bottom;
+    font-size: $font-size-small;
+
+    td {
+      padding: 2mm;
+    }
+  }
+}
+
