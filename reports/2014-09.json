@@ -1,0 +1,17 @@
+{
+  "date": "26.09.2014",
+  "reportNo": 2,
+  "activities": [
+    "An Importscript für das Einpflegen der Daten aus dem Oxid-Shop in Magento gearbeitet, ein Ruby-on-Rails-Projekt lokal installiert",
+    "Datenbank des RoR-Projekts lokal aufgesetzt, um später an der Entwicklung helfen zu können, beim Aufräumen des Serverraumes geholfen (Kabel und alte Hardware sortiert, Monitore getestet)",
+    "TYPO3-Vorlage lokal eingerichtet für Portierung eines Shellscripts in einen Yeoman-Generator",
+    "Weiter an der Portierung des Shellscripts gearbeitet, Ablaufdiagramm für selbiges erstellt, Arbeitsplatz für zwei neue Mitarbeiter aufgebaut (Tisch und Monitore)"
+  ],
+  "topics": [
+    "Unterweisung in die Entwicklung von Magento-Shellscripts",
+    "Unterweisung in die Nutzung der PHPStorm-IDE",
+    "Recherche über die Entwicklung von Yeoman-Generatoren",
+    "Recherche über das Erstellen von Ablaufdiagrammen"
+  ]
+}
+

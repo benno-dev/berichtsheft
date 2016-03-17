@@ -4,10 +4,11 @@ var express = require('express');
 var sassMiddleware = require('node-sass-middleware');
 
 var reportsDir = path.join(__dirname, 'reports');
-var reportFileRegex = /(\d{4})-(\d{1,2})\.json/;
-var monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli',
-                  'August', 'September', 'Oktober', 'November', 'Dezember'];
-
+var reportFileRegex = /(\d{4})-0?(\d{1,2})\.json/;
+var monthNames = [
+  null, 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August',
+  'September', 'Oktober', 'November', 'Dezember'
+];
 
 var app = express();
 app.set('view engine', 'jade');
@@ -21,15 +22,21 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-  var context = { years: {} };
 
-  var files = fs.readdirSync(reportsDir).map(function(file) {
+  var context = { years: {} };
+  fs.readdirSync(reportsDir).map(function(file) {
+
     var matches = reportFileRegex.exec(file);
+    if (matches === null) {
+      console.error(file + ' doesnt match');
+      return {};
+    }
+
     return {
       url: '/reports/' + matches[1] + '/' + matches[2],
       year: matches[1],
       month: matches[2],
-      monthName: monthNames[matches[2]]
+      monthName: monthNames[parseInt(matches[2])]
     };
 
   }).forEach(function(report) {
@@ -45,7 +52,7 @@ app.get('/', function(req, res) {
 
 });
 
-app.get('/reports/:year/:month', function(req, res) {
+app.get('/reports/:year/0?:month', function(req, res) {
   var fileName = req.params.year + '-' + req.params.month + '.json';
 
   try {

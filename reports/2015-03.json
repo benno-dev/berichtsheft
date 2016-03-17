@@ -1,0 +1,19 @@
+{
+  "date": "28.4.2015",
+  "reportNo": 7,
+  "activities": [
+    "Aktualisierung alter Projekte, Anpassungen und Fehlerbehebungen für ein Magento-Importscript.",
+    "Eine WordPress-Seite aufgesetzt, diverse Anpassungen am Theme dieser Seite vorgenommen, Problem mit unsichtbaren Magento-Artikeln untersucht und mit Hilfe eines Mitarbeiters gelöst.",
+    "Das Magento-Importscript überarbeitet (Fehler und alten Code entfernt), IP-Logging in einer Komponente von diversen TYPO3-Projekten deaktiviert, die WordPress-Seite auf Fehler getestet und diverse Anpassungen am Theme vorgenommen.",
+    "Fehler auf dem Kunden-Preivew der WordPress-Seite behoben, diverse kleinere Anpassungen an der Übersetzung der Seite, rechtliche Texte eingepflegt, Anpassungen an der Produktdetailseite eines Magento-Shops, eine TYPO3-Seite auf verschiedenen Tablets getestet."
+  ],
+  "topics": [
+    "Unterweisung in der Umsetzung verschiedener Aktualisierungen",
+    "Unterweisung im Anlegen und Arbeiten mit WordPress-Child-Themes",
+    "Unterweisung in der Konfiguration von TYPO3-Projekten sowie Typoscript",
+    "Einweisung in die Nutzung von BrowserStack zum Testen von Webseiten auf verschiedenen Plattformen"
+  ]
+}
+
+
+
