@@ -10,6 +10,6 @@ html
       h2= yearNo
       ul
         each report in reports
-          li
+          li(class=typeof report.filed === 'undefined' ? '' : 'filed')
             a(href=report.url)= report.monthName
 

@@ -10,6 +10,10 @@ var monthNames = [
   'September', 'Oktober', 'November', 'Dezember'
 ];
 
+var loadJson = function(file) {
+  return JSON.parse(fs.readFileSync(file));
+};
+
 var app = express();
 app.set('view engine', 'jade');
 
@@ -32,8 +36,11 @@ app.get('/', function(req, res) {
       return {};
     }
 
+    var report = loadJson(path.join(reportsDir, file));
+
     return {
       url: '/reports/' + matches[1] + '/' + matches[2],
+      filed: report.filed,
       year: matches[1],
       month: matches[2],
       monthName: monthNames[parseInt(matches[2])]
@@ -56,9 +63,7 @@ app.get('/reports/:year/0?:month', function(req, res) {
   var fileName = req.params.year + '-' + req.params.month + '.json';
 
   try {
-    var rawJson = fs.readFileSync(path.join(reportsDir, fileName));
-    var report = JSON.parse(rawJson);
-
+    var report = loadJson(fileName);
     report.monthName = monthNames[req.params.month];
     res.render('report', report);
   } catch (e) {

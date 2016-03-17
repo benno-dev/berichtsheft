@@ -7,10 +7,20 @@ h2 {
 }
 
 ul {
-  padding-left: 16px;
+  padding-left: 6px;
   margin: 12px;
 
   li {
     list-style: none;
+    text-indent: 1em;
+  }
+
+  li.filed {
+    text-indent: 0;
+  }
+
+  li.filed:before {
+    content: '✔';
+    margin-right: 5px;
   }
 }
