@@ -53,6 +53,7 @@ h1 {
 
   .row-activity td {
     height: 10cm;
+    min-height: 10cm;
     max-height: 10cm;
   }
 
@@ -137,9 +138,13 @@ h1 {
     }
   }
 
+  .row-activity h1 {
+    margin-bottom: 3mm;
+  }
+
   .row-activity .week {
-    height: 2.95cm;
-    max-height: 2.95cm;
+    height: 2.75cm;
+    max-height: 2.75cm;
   }
 
   .row-topics .week {

@@ -31,6 +31,7 @@ h1 {
     max-height: 2.8cm; }
   .nachweis .row-activity td {
     height: 10cm;
+    min-height: 10cm;
     max-height: 10cm; }
   .nachweis .row-topics-head td {
     height: 1cm;
@@ -75,9 +76,11 @@ h1 {
       font-weight: normal; }
     .nachweis .row-activity p, .nachweis .row-topics p {
       padding-left: 9mm; }
+  .nachweis .row-activity h1 {
+    margin-bottom: 3mm; }
   .nachweis .row-activity .week {
-    height: 2.95cm;
-    max-height: 2.95cm; }
+    height: 2.75cm;
+    max-height: 2.75cm; }
   .nachweis .row-topics .week {
     height: 25%;
     padding-top: 2mm;
