@@ -39,7 +39,7 @@ app.get('/', function(req, res) {
     var report = loadJson(path.join(reportsDir, file));
 
     return {
-      url: '/reports/' + matches[1] + '/' + matches[2],
+      url: '/reports/' + matches[1] + '/' + ('00' + matches[2]).substr(-2, 2),
       filed: report.filed,
       year: matches[1],
       month: matches[2],
@@ -59,12 +59,12 @@ app.get('/', function(req, res) {
 
 });
 
-app.get('/reports/:year/0?:month', function(req, res) {
+app.get('/reports/:year/:month', function(req, res) {
   var fileName = req.params.year + '-' + req.params.month + '.json';
 
   try {
-    var report = loadJson(fileName);
-    report.monthName = monthNames[req.params.month];
+    var report = loadJson(path.join(reportsDir, fileName));
+    report.monthName = monthNames[parseInt(req.params.month)];
     res.render('report', report);
   } catch (e) {
     res.send(e);
