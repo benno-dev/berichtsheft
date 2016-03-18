@@ -1,0 +1,16 @@
+{
+  "date": "17.3.2016",
+  "reportNo": 15,
+  "activities": [
+    "Alternativen Workflow für Magento-Projekte getestet, Frontend-Feature in Magento-Projekt umgesetzt, Arbeitsumgebung mit Userscripts optimiert",
+    "Upgrade der intern genutzten Redmine-Plugins, Unit-Tests für Redmine-Plugins zum laufen gebracht, Contentpflege in TYPO3",
+    "(Urlaub)",
+    "(Urlaub)"
+  ],
+  "topics": [
+    "-",
+    "Recherche über Unit-Testing in Rails",
+    "-",
+    "-"
+  ]
+}

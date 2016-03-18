@@ -1,0 +1,16 @@
+{
+  "date": "18.3.2016",
+  "reportNo": 17,
+  "activities": [
+    "Webscraper für eine Partnerfirma umgesetzt und deployt, Browsertesting einer Agentureigenen Seite, Upgrade der internen Redmine-Plugins",
+    "Ursprünglich in JS umgesetzten Webscraper in Ruby neu implementiert, Upgrade Redmine-Plugins",
+    "Upgrade Redmine-Plugins, BPG-Codec zum Einsatz in einem Projekt evaluieren",
+    "Upgrade Redmine-Plugins, Inhalte in einer TYPO3-Seite gepflegt, neues Entwicklungssystem auf Docker-Basis umgesetzt und erprobt"
+  ],
+  "topics": [
+    "-",
+    "Recherche zu Capistrano (Ruby Deployment Tool), Dokumentation von PostgreSQL gelesen",
+    "Recherche zur Redmine-API, auf GitHub nach fertig umgesetzten Upgrades von Redmine-Plugins suchen",
+    "Recherche über Docker"
+  ]
+}

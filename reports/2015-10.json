@@ -1,0 +1,16 @@
+{
+  "date": "17.3.2016",
+  "reportNo": 13,
+  "activities": [
+    "Upgraden der intern genutzten Redmine-Plugins, Umsetzen eines Features für einen Magento-Shop",
+    "Features für einen Magento-Shop umgesetzt, kleine Anpassung an einem Node-Projekt, Contentpflege in diversen TYPO3-Seiten",
+    "Daten für einen Import in Magento vorbereitet und den Import erweitert, Onlinegang eines Node-Projektes vorbereitet",
+    "Berufsschule und Traffic"
+  ],
+  "topics": [
+    "Recherche über AJAX in Rails-Apps",
+    "-",
+    "-",
+    "-"
+  ]
+}
