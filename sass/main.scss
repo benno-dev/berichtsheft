@@ -1,26 +1,44 @@
+@import "vars.scss";
+
 body {
-  font-family: Helvetica Neue;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: $color-solarized-bg;
+  color: $color-solarized-base2;
 }
 
-h2 {
-  margin: 12px 2px;
+h1, h2 {
+  margin: 12px 0;
 }
 
-ul {
+.year {
+  float: left;
+}
+
+.year-list {
   padding-left: 6px;
-  margin: 12px;
+  width: 150px;
+  margin: 0;
+
+  a {
+    color: $color-solarized-blue;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   li {
     list-style: none;
-    text-indent: 1em;
-  }
 
-  li.filed {
-    text-indent: 0;
-  }
+    &:before {
+      content: '☐';
+      margin-right: 5px;
+    }
 
-  li.filed:before {
-    content: '✔';
-    margin-right: 5px;
+    &.filed:before {
+      content: '☑';
+    }
   }
 }

@@ -7,9 +7,10 @@ html
     h1 Berichtshefte
 
     each reports, yearNo in years
-      h2= yearNo
-      ul
-        each report in reports
-          li(class=typeof report.filed === 'undefined' ? '' : 'filed')
-            a(href=report.url)= report.monthName
+      div(class='year')
+        h2= yearNo
+        ul(class='year-list')
+          each report in reports
+            li(class=typeof report.filed === 'undefined' ? '' : 'filed')
+              a(href=report.url)= report.monthName
 

@@ -1,18 +1,29 @@
 @charset "UTF-8";
 body {
-  font-family: Helvetica Neue; }
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fdf6e3;
+  color: #073642; }
 
-h2 {
-  margin: 12px 2px; }
+h1, h2 {
+  margin: 12px 0; }
 
-ul {
+.year {
+  float: left; }
+
+.year-list {
   padding-left: 6px;
-  margin: 12px; }
-  ul li {
-    list-style: none;
-    text-indent: 1em; }
-  ul li.filed {
-    text-indent: 0; }
-  ul li.filed:before {
-    content: '✔';
-    margin-right: 5px; }
+  width: 150px;
+  margin: 0; }
+  .year-list a {
+    color: #268bd2;
+    text-decoration: none;
+    vertical-align: middle; }
+    .year-list a:hover {
+      text-decoration: underline; }
+  .year-list li {
+    list-style: none; }
+    .year-list li:before {
+      content: '☐';
+      margin-right: 5px; }
+    .year-list li.filed:before {
+      content: '☑'; }
