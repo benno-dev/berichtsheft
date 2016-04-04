@@ -12,14 +12,6 @@ $font-size-large: 16pt;
   body {
     width: auto !important;
     margin: 1.25mm;
-
-    > h1 {
-      display: none !important;
-    }
-  }
-
-  .navigation {
-    display: none !important;
   }
 }
 
@@ -168,4 +160,3 @@ h1 {
     }
   }
 }
-

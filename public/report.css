@@ -4,11 +4,7 @@
 @media print {
   body {
     width: auto !important;
-    margin: 1.25mm; }
-    body > h1 {
-      display: none !important; }
-  .navigation {
-    display: none !important; } }
+    margin: 1.25mm; } }
 
 body {
   font: 11pt Helvetica;
