@@ -67,7 +67,12 @@ app.get('/reports/:year/:month', function(req, res) {
     report.monthName = monthNames[parseInt(req.params.month)];
     res.render('report', report);
   } catch (e) {
-    res.send(e);
+    if (e.code === 'ENOENT') {
+      res.status('404');
+      res.send('Not found');
+    } else {
+      res.send(e);
+    }
   }
 });
 
