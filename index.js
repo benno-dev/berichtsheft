@@ -3,7 +3,7 @@ var path = require('path');
 var express = require('express');
 var sassMiddleware = require('node-sass-middleware');
 
-var reportsDir = path.join(__dirname, 'reports');
+var reportsDir = path.join(__dirname, 'data', 'berichte');
 var reportFileRegex = /(\d{4})-0?(\d{1,2})\.json/;
 var monthNames = [
   null, 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August',
