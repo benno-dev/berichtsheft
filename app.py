@@ -28,16 +28,16 @@ def group_reports_by_year(reports):
     years = {}
     for report in reports:
         year = report["year"]
-        if not year in years:
-            years[year] = { "yearNo": year, "reports": [] }
+        if year not in years:
+            years[year] = {"yearNo": year, "reports": []}
         years[year]["reports"].append(report)
     return years.values()
 
 
 def get_report_files():
-    return [ os.path.join(reports_dir, f)
-             for f in os.listdir(reports_dir)
-             if is_report_file(os.path.join(reports_dir, f)) ]
+    return [os.path.join(reports_dir, f)
+            for f in os.listdir(reports_dir)
+            if is_report_file(os.path.join(reports_dir, f))]
 
 
 def load_report_metadata(path):
@@ -86,4 +86,3 @@ def view_report(year, month):
 
 if __name__ == "__main__":
     app.run()
-
