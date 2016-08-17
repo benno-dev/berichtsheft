@@ -1,0 +1,16 @@
+{
+  "date": "30.5.2016",
+  "reportNo": 20,
+  "activities": [
+    "Berufsschule",
+    "Berufsschule",
+    "API zum Abfragen des Präsenzstatus von Skype for Business Usern bauen, Dokumentieren eines abgeschlossenen Projektes, Wartung an einem Tool",
+    "Deployment für Skype-API einrichten, Stabilität verbessern, Fehler beheben, Einsatz auf einer Webseite testen"
+  ],
+  "topics": [
+    "-",
+    "-",
+    "Recherche in der UCWA-Dokumentation von Microsoft",
+    "Recherche zum Capistrano-Deploymenttool"
+  ]
+}

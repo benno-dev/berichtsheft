@@ -1,0 +1,16 @@
+{
+  "date": "28.7.2016",
+  "reportNo": 22,
+  "activities": [
+    "Mailtemplates in einen neuen Shop einbauen, kleinere Wartungen an internen Tools",
+    "Urlaub",
+    "Urlaub",
+    "Mailtemplates in zwei neuen Shops einbauen, geänderte Anforderungen übernehmen, Deployment der Skype-API optimieren, Wartung an einem internen Entwicklungstool"
+  ],
+  "topics": [
+    "-",
+    "-",
+    "-",
+    "Recherche Rails-API zur generierung von URLs sowie zum schreiben von Rake-Tasks"
+  ]
+}

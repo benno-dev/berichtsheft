@@ -1,0 +1,16 @@
+{
+  "date": "30.6.2016",
+  "reportNo": 21,
+  "activities": [
+    "Anpassungen an der Skype-API, kleine Anpassung an einem internen Tool",
+    "Lösung für ein Deployment-Problem bei der Skype-API erarbeiten und Fehlermeldesystem eingebauen, Anpassungen am Frontend",
+    "Tool zum berechnen der Werktage in einem Zeitraum gebaut, Anpassungen an der Skype-API, Vorbereitung auf die Entwicklung eines internen Rechnungsmoduls",
+    "TYPO3-Handbuch für einen Kunden erweitern, Fehler in Skype-API debuggen, Mailtemplates in einen neuen Shop einbauen"
+  ],
+  "topics": [
+    "",
+    "",
+    "Recherche Redmine-API, Rails, Code anderer Redmine-Plugins lesen",
+    "Recherche Solidus-Gem/Rails Templatesystem"
+  ]
+}

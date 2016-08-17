@@ -1,0 +1,16 @@
+{
+  "date": "",
+  "reportNo": 21,
+  "activities": [
+    "Anpassung an einer internen Redmine-Erweiterung, Testdaten für Bestell-Emails anlegen und weiter Templates anpassen, Onlinegang der Skype-API vorbereiten",
+    "Finale Anpassungen an der Skype-API, Frontend nach Screendesign anpassen",
+    "Umsetzen eines internen Rechnungsmoduls",
+    "Berufsschule"
+  ],
+  "topics": [
+    "Dokumentation von Spree lesen",
+    "Recherche Redmine-Dokumentation",
+    "-",
+    "-"
+  ]
+}
