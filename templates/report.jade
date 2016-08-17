@@ -1,6 +1,6 @@
 html
   head
-    link(rel='stylesheet' href='/report.css')
+    link(rel="stylesheet" href="/static/report.css")
   body
     table.nachweis
       tr.row-header
@@ -12,7 +12,7 @@ html
           h1 Ausbildungsnachweis
           p.meta-month
             | für den Monat&nbsp;
-            span= monthName
+            span= month_name
         td.meta-nr-and-date
           p.meta-nr
             | Nachweis-Nr.
@@ -21,7 +21,7 @@ html
             | Datum
             span= date
       tr.row-activity
-        td(colspan='3')
+        td(colspan="3")
           h1 Betriebliche Tätigkeit
           .week
             h2 1. Woche
@@ -36,12 +36,12 @@ html
             h2 4. Woche
             p= activities[3]
       tr.row-topics-head
-        td(colspan='3')
+        td(colspan="3")
           | Themen der Unterweisung, Lehrgespräche des betrieblichen Unterrichts
           br
           |       und außerbetriebliche Schulungsveranstaltungen
       tr.row-topics
-        td(colspan='3')
+        td(colspan="3")
           .week
             h2 1. Woche
             p= topics[0]
@@ -60,4 +60,5 @@ html
         td
           | Unterschrift des Auszubildenden
         td.empty
+
 

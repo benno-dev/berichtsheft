@@ -1,0 +1,14 @@
+html
+  head
+    title Berichtshefte
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="/static/main.css")
+    block scripts
+  body
+    div(id="header")
+      h1 Berichtshefte
+
+    div(id="content-wrap")
+      h2= title
+      block content
+

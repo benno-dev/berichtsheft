@@ -1,0 +1,94 @@
+@page {
+  size: A4; }
+
+  @media print {
+    body {
+      width: auto !important;
+      margin: 1.25mm;   }
+}
+
+body {
+  font: 11pt Helvetica;
+  color: gray;
+  width: calc(240mm - 2.5mm);
+  height: calc(297mm - 2.5mm); }
+
+  h1 {
+    margin: 1mm 0;
+    font-size: 16pt; }
+
+    .nachweis {
+      border-collapse: collapse; }
+      .nachweis td {
+        border: 1px solid gray;
+        padding: 0 4px;
+        margin: 0; }
+        .nachweis .row-header td {
+          height: 2.8cm;
+          max-height: 2.8cm; }
+          .nachweis .row-activity td {
+            height: 10cm;
+            min-height: 10cm;
+            max-height: 10cm; }
+            .nachweis .row-topics-head td {
+              height: 1cm;
+              max-height: 1cm; }
+              .nachweis .row-topics td {
+                height: 6.85cm;
+                max-height: 6.85cm; }
+                .nachweis .row-signatures td {
+                  height: 2.3cm;
+                  max-height: 2.3cm; }
+                  .nachweis .row-header td {
+                    position: relative; }
+                    .nachweis .row-header td span {
+                      float: right; }
+                      .nachweis .row-header td > :nth-child(1), .nachweis .row-header td > :nth-child(2) {
+                        position: absolute;
+                        margin: 0 auto;
+                        left: 0;
+                        right: 0; }
+                        .nachweis .row-header td > :nth-child(1) {
+                          bottom: 15mm; }
+                          .nachweis .row-header td > :nth-child(2) {
+                            bottom: 6mm; }
+                  .nachweis .row-header .meta-dept, .nachweis .row-header .meta-nr-and-date {
+                    width: 5.25cm; }
+                    .nachweis .row-header .headline {
+                      width: 7.5cm; }
+                      .nachweis .row-header .meta-dept, .nachweis .row-header .headline {
+                        text-align: center; }
+                        .nachweis .row-header .meta-dept span, .nachweis .row-header .headline span {
+                          float: none; }
+                  .nachweis .row-header .meta-nr-and-date p {
+                    left: 3mm;
+                    right: 3mm; }
+      .nachweis .row-activity, .nachweis .row-topics {
+        vertical-align: top; }
+        .nachweis .row-activity h2, .nachweis .row-activity p, .nachweis .row-topics h2,
+        .nachweis .row-topics p {
+          font-size: 11pt;
+          margin: 0;
+          padding: 0; }
+          .nachweis .row-activity h2, .nachweis .row-topics h2 {
+            font-weight: normal; }
+            .nachweis .row-activity p, .nachweis .row-topics p {
+              padding-left: 9mm; }
+      .nachweis .row-activity h1 {
+        margin-bottom: 3mm; }
+        .nachweis .row-activity .week {
+          height: 2.75cm;
+          max-height: 2.75cm; }
+          .nachweis .row-topics .week {
+            height: 25%;
+            padding-top: 2mm;
+            padding-bottom: 2mm; }
+            .nachweis .row-topics-head {
+              font-size: 9pt;
+              text-align: center; }
+              .nachweis .row-signatures {
+                height: 67px;
+                vertical-align: bottom;
+                font-size: 9pt; }
+                .nachweis .row-signatures td {
+                  padding: 2mm; }
