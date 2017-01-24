@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from flask.ext.scss import Scss
+from flask_scss import Scss
 import calendar
 import json
 import locale
