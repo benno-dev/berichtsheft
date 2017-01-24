@@ -15,7 +15,7 @@ Scss(app)
 # Settings, put these somewhere else later
 reports_dir = "data/reports"
 reportfile_regex = re.compile("(?P<year>\d{4})-(?P<month>\d{2})\.json")
-locale.setlocale(locale.LC_ALL, "de_DE")
+locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
 
 
 def is_report_file(path):
