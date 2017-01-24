@@ -35,9 +35,9 @@ def group_reports_by_year(reports):
 
 
 def get_report_files():
-    return [os.path.join(reports_dir, f)
-            for f in os.listdir(reports_dir)
-            if is_report_file(os.path.join(reports_dir, f))]
+    return sorted([os.path.join(reports_dir, f)
+                   for f in os.listdir(reports_dir)
+                   if is_report_file(os.path.join(reports_dir, f))])
 
 
 def load_report_metadata(path):
