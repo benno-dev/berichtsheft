@@ -76,6 +76,7 @@ def view_report(year, month):
             context = json.load(fp)
 
         context["month_name"] = calendar.month_name[int(month)]
+        context["year"] = year
 
         return render_template("report.html", **context)
 
