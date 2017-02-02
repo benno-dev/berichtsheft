@@ -1,17 +1,56 @@
 @import "vars";
 
+@media print {
+  .navigation {
+    display: none;
+  }
+
+  .report-view {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+html, body {
+  height: 100vh;
+}
+
 body {
+  display: flex;
+  margin: 0;
+
   font-family: 'Helvetica Neue', sans-serif;
   background-color: $color-solarized-bg;
   color: $color-solarized-base2;
 }
 
-h1, h2 {
-  margin: 12px 0;
+.navigation {
+  margin: 0 1em;
+
+  h1 {
+    margin: 0.2em 0;
+  }
+
+  h2 {
+    margin: 0.5em 0;
+  }
+}
+
+.report-view {
+  margin: 0;
+  width: 99%;
+  height: 99%;
+
+  iframe {
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .year {
-  float: left;
+  display: block;
 }
 
 .year-list {
@@ -25,6 +64,11 @@ h1, h2 {
     vertical-align: middle;
 
     &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      font-weight: bold;
       text-decoration: underline;
     }
   }

@@ -4,22 +4,32 @@ $font-size-small: 9pt;
 $font-size-normal: 11pt;
 $font-size-large: 16pt;
 
+@mixin force-height($height) {
+  height: $height;
+  max-height: $height;
+  min-height: $height;
+}
+
 @page {
   size: A4;
 }
 
 @media print {
-  body {
-    width: auto !important;
-    margin: 1.25mm;
+  html, body {
+    overflow: hidden;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font: $font-size-normal Helvetica;
   color: $color-gray;
-  width: calc(240mm - 2.5mm);
-  height: calc(297mm - 2.5mm);
+  width: calc(210mm - 20mm - 12mm);
+  max-width: calc(210mm - 20mm - 12mm);
+  margin: 12mm 12mm 0 20mm;
 }
 
 h1 {
@@ -29,6 +39,7 @@ h1 {
 
 .nachweis {
   border-collapse: collapse;
+  table-layout: fixed;
 
   td {
     border: 1px solid $color-gray;
@@ -39,29 +50,23 @@ h1 {
   // Dimensions
 
   .row-header td {
-    height: 2.8cm;
-    max-height: 2.8cm;
+    @include force-height(28mm);
   }
 
   .row-activity td {
-    height: 10cm;
-    min-height: 10cm;
-    max-height: 10cm;
+    @include force-height(140mm);
   }
 
   .row-topics-head td {
-    height: 1cm;
-    max-height: 1cm;
+    @include force-height(13mm);
   }
 
   .row-topics td {
-    height: 6.85cm;
-    max-height: 6.85cm;
+    @include force-height(68mm);
   }
 
   .row-signatures td {
-    height: 2.3cm;
-    max-height: 2.3cm;
+    @include force-height(28mm);
   }
 
   .row-header  {
@@ -135,8 +140,7 @@ h1 {
   }
 
   .row-activity .week {
-    height: 2.75cm;
-    max-height: 2.75cm;
+    height: calc(25% - 10px);
   }
 
   .row-topics .week {
@@ -151,12 +155,21 @@ h1 {
   }
 
   .row-signatures {
-    height: 67px;
     vertical-align: bottom;
+    text-align: center;
     font-size: $font-size-small;
 
     td {
-      padding: 2mm;
+      padding: 1mm;
+      @include force-height(18mm);
+    }
+
+    >:nth-child(1) {
+      width: 56mm;
+    }
+
+    >:nth-child(2) {
+      width: 56mm;
     }
   }
 }

@@ -1,18 +1,33 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Berichtsheft</title>
+    <link rel="stylesheet" href="/static/main.css"/>
+    <script src="/static/main.js"></script>
+  </head>
+  <body>
 
-{% block content %}
+    <div class="navigation">
+      <h1>Berichtshefte</h1>
 
-{% for year in years %}
-<div class="year">
-  <h2>{{ year.yearNo }}</h2>
-  <ul class="year-list">
-    {% for report in year.reports %}
-      <li class="{{ "filed" if report.filed else "" }}">
-        <a href="{{ report.url }}" target="_blank">{{ report.month_name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-{% endfor %}
+      {% for year in years %}
+      <div class="year">
+        <h2>{{ year.yearNo }}</h2>
+        <ul class="year-list">
+          {% for report in year.reports %}
+          <li class="{{ "filed" if report.filed else "" }}">
+            <a href="{{ report.url }}" target="_blank">{{ report.month_name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
 
-{% endblock %}
+    <div class="report-view">
+      <iframe src=""></iframe>
+    </div>
+
+  </body>
+</html>
