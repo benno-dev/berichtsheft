@@ -45,15 +45,15 @@ def load_report_metadata(path):
     with open(path, "r") as fp:
         report = json.load(fp)
 
-    year_s = matches.group("year")
-    month_s = matches.group("month")
+    year = matches.group("year")
+    month = matches.group("month")
 
     return {
-        "url": "/reports/{}/{}".format(year_s, month_s),
+        "url": "/reports/{}/{}".format(year, month),
         "filed": report.get("filed", False),
-        "year": year_s,
-        "month": month_s,
-        "month_name": calendar.month_name[int(month_s)]
+        "year": year,
+        "month": month,
+        "month_name": calendar.month_name[int(month)]
     }
 
 
