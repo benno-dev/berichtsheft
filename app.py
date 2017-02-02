@@ -34,9 +34,9 @@ def group_reports_by_year(reports):
 
 
 def get_report_files():
-    return sorted([os.path.join(reports_dir, f)
-                   for f in os.listdir(reports_dir)
-                   if is_report_file(os.path.join(reports_dir, f))])
+    return [os.path.join(reports_dir, f)
+            for f in os.listdir(reports_dir)
+            if is_report_file(os.path.join(reports_dir, f))]
 
 
 def load_report_metadata(path):
@@ -61,7 +61,8 @@ def load_report_metadata(path):
 
 @app.route("/")
 def index():
-    reports = list(map(load_report_metadata, get_report_files()))
+    report_files = reversed(sorted(get_report_files()))
+    reports = list(map(load_report_metadata, report_files))
     years = group_reports_by_year(reports)
     return render_template("index.html", years=years)
 
