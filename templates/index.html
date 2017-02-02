@@ -13,7 +13,7 @@
 
       {% for year in years %}
       <div class="year">
-        <h2>{{ year.yearNo }}</h2>
+        <h2>{{ year.title }}</h2>
         <ul class="year-list">
           {% for report in year.reports %}
           <li class="{{ "filed" if report.filed else "" }}">

@@ -28,7 +28,7 @@ def group_reports_by_year(reports):
     for report in reports:
         year = report["year"]
         if year not in years:
-            years[year] = {"yearNo": year, "reports": []}
+            years[year] = {"title": year, "reports": []}
         years[year]["reports"].append(report)
     return years.values()
 
