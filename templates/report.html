@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Bericht {{ date }}</title>
+    <link rel="stylesheet" href="/static/report.css"/>
+  </head>
+  <body>
+    <table class="nachweis">
+
+      <tr class="row-header">
+
+        <td class="meta-dept">
+          <p>Abteilung oder Sparte</p>
+          <p><span style="color:red;">Muss noch ausgefüllt werden!</span></p>
+        </td>
+
+        <td class="headline">
+          <h1>Ausbildungsnachweis</h1>
+          <p class="meta-month">
+          für den Monat <span>{{ month_name }}</span>
+          </p>
+        </td>
+
+        <td class="meta-nr-and-date">
+          <p class="meta-nr">
+          Nachweis-Nr. <span>{{ reportNo }}</span>
+          </p>
+          <p class="meta-date">
+          Datum <span>{{ date }}</span>
+          </p>
+        </td>
+
+      </tr>
+
+      <tr class="row-activity">
+        <td colspan="3">
+
+          <h1>Betriebliche Tätigkeit</h1>
+
+          {% for activity in activities %}
+          <div class="week">
+            <h2>{{ loop.index }}. Woche</h2>
+            <p>{{ activity }}</p>
+          </div>
+          {% endfor %}
+
+        </td>
+      </tr>
+
+      <tr class="row-topics-head">
+        <td colspan="3">
+          Themen der Unterweisung, Lehrgespräche des betrieblichen Unterrichts
+          <br/> und außerbetriebliche Schulungsveranstaltungen
+        </td>
+      </tr>
+
+      <tr class="row-topics">
+        <td colspan="3">
+
+          {% for topic in topics %}
+          <div class="week">
+            <h2>{{ loop.index }}. Woche</h2>
+            <p>{{ topic }}</p>
+          </div>
+          {% endfor %}
+
+        </td>
+      </tr>
+
+      <tr class="row-signatures">
+        <td>Unterschrift des Ausbildenden</td>
+        <td>Unterschrift des Auszubildenden</td>
+        <td></td>
+      </tr>
+
+    </table>
+
+  </body>
+</html>

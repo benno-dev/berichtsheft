@@ -9,7 +9,6 @@ import re
 # Flask setup
 app = Flask(__name__)
 app.debug = True
-app.jinja_env.add_extension("pyjade.ext.jinja.PyJadeExtension")
 Scss(app)
 
 # Settings, put these somewhere else later
@@ -64,7 +63,7 @@ def load_report_metadata(path):
 def index():
     reports = list(map(load_report_metadata, get_report_files()))
     years = group_reports_by_year(reports)
-    return render_template("index.jade", years=years)
+    return render_template("index.html", years=years)
 
 
 @app.route("/reports/<string:year>/<string:month>")
@@ -78,7 +77,7 @@ def view_report(year, month):
 
         context["month_name"] = calendar.month_name[int(month)]
 
-        return render_template("report.jade", **context)
+        return render_template("report.html", **context)
 
     except FileNotFoundError:
         return "File not found: {}".format(report_path)
