@@ -2,6 +2,8 @@
 
 Diese App rendert JSON-Dateien in ein Template das die Berichtsheftvorlage der IHK Detmold nachahmt.
 
+![screenshot](https://github.com/sometoby/berichtsheft/raw/master/.screenshot.png)
+
 ## Bekannte Probleme/Fehlende Features
 
 * Berufsschulblöcke können noch nicht gepflegt werden.
@@ -13,7 +15,7 @@ Diese App rendert JSON-Dateien in ein Template das die Berichtsheftvorlage der I
 
 * Git
 * Python 3.4 oder neuer
-* Optional: virtualenv und virtualenvwrapper, um die Abhängigkeiten getrennt zu installieren.
+* Optional: virtualenv und virtualenvwrapper, um die Abhängigkeiten nicht systemweit zu installieren
 
 ## Installation
 
