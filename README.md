@@ -9,7 +9,6 @@ Diese App rendert JSON-Dateien in ein Template das die Berichtsheftvorlage der I
 * Berufsschulblöcke können noch nicht gepflegt werden.
 * Beim Ausdrucken muss noch mit Einstellungen rumgepfuscht werden damit das Layout richtig aussieht.
 * Wenn die komplette Berichtsseite nicht auf den Bildschirm passt ist das Scrollverhalten eher mies.
-* "Abteilung oder Sparte" kann nicht über eine Option eingestellt werden.
 
 ## Benötigte Software
 
@@ -52,6 +51,7 @@ Die JSON-Dateien sollten wie folgt aussehen:
   "filed": true,
   "date": "28.08.2014",
   "reportNo": 1,
+  "sparte": "Abteilung oder Sparte",
   "activities": [
     "Betriebliche Tätigkeit der ersten Woche",
     "Ditto, zweite Woche",
