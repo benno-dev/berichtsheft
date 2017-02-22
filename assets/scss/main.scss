@@ -1,14 +1,29 @@
 @import "vars";
 
+@page {
+  margin: 0;
+  size: A4;
+}
+
 @media print {
   .navigation {
     display: none;
   }
 
   .report-view {
+    margin: 0 !important;
     width: 100% !important;
     height: 100% !important;
+    box-shadow: none !important;
   }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html, body {

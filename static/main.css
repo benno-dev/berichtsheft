@@ -1,27 +1,39 @@
-@media print {
-  .navigation {
-    display: none;   }
-    .report-view {
-      width: 100% !important;
-      height: 100% !important;   }
+@page {
+  margin: 0;
+  size: A4; }
+
+  @media print {
+    .navigation {
+      display: none;   }
+      .report-view {
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        box-shadow: none !important;   }
 }
 
-html, body {
-  height: 100vh; }
+html {
+  box-sizing: border-box; }
 
-  body {
-    display: flex;
-    margin: 0 auto;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #fdf6e3;
-    color: #073642; }
+  *, *:before, *:after {
+    box-sizing: inherit; }
 
-    .navigation {
-      margin: 0.6em; }
-      .navigation h1 {
-        margin: 0.2em 0; }
-        .navigation h2 {
-          margin: 0.5em 0; }
+    html, body {
+      height: 100vh; }
+
+      body {
+        display: flex;
+        margin: 0 auto;
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #fdf6e3;
+        color: #073642; }
+
+        .navigation {
+          margin: 0.6em; }
+          .navigation h1 {
+            margin: 0.2em 0; }
+            .navigation h2 {
+              margin: 0.5em 0; }
 
 .report-view {
   margin: 0.6em;
